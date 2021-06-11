@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistic Calculator</title>
+    <link rel="shortcut icon" type="image/png" href="analytics.png">
+
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo"><p id="logo_word1">Statistic</p> <p id="logo_word2">Calculator</p></div>
+            <div class="nav_el"><p><a href="#home">Home</a></p><p><a href="#pseudo_about">About Page</a></p><p><a href="#contact"> Contact Me</a></p</div>
+        </nav>
+    </div>
+    <div id="home">'</div>
+    <main >
+        <p class="hd1">Welcome!</p>
+        <p>Here You can calculte Mean, Median, Mode and many other statistical Calculations. With just  One Click.</p>
+        <p>.</p>
+        <p>.</p>
+        <p class="que">How to use this Calculator?</p>
+        <p>Step 1: Enter a First Lower Boundary of your Data.</p>
+        <p>Step 2: Enter First Upper Boundary of your Data.</p>
+        <p>Step 3: Enter how many rows of data you want.</p>
+        <p>Step 4: Click on Make Table, Enter the Frequency Values and Click on submit.</p>
+        <p>Step 5: Click on Calculte.</p>
+        <p>. </p>
+        <p>.</p>
+        <p class="que">Don't Have a Data to fill?</p>
+        <p>Step 1: Click on Fill sample and then Click on Make table.</p>
+        <p>Step 2: Click on Fill sample to fill Frequency and Click on Submit.</p>
+        <p>Step 3: Now Click On Calculate and Feel the Magic.</p>
+    </main>
+    <div class="table_container">
+        <div class="data_input">
+            <div class="child_a"><label for="lb">Lower Boundary:<input type="number" id="lb"></label></div>
+            <div class="child_b"><label for="ub">Upper Boundary:<input type="number" id="ub"></label></div>
+            <div class="child_c"><label for="Num_rows">Num of Rows:<input type="number" id="num_rows"></label></div>
+            <div class="child_e"><button id="fill_sample">Fill Sample</button></div>
+            <div class="child_d"><button id="make_table">Make Table</button></div>
+            <div class="child_e"><button id="reload">Reset Table</button></div>
+        </div>
+        <table id="data_table">
+            <tr><th colspan="2">Classes</th> <th rowspan="2">Frequency</th></tr>
+            <tr><th>Lower Boundary</th> <th>Upper Boundary</th></tr>
+        </table>
+        <button id="fill_sample2">Fill Sample Frequency</button>
+        <button id="submit">Submit</button>
+        <p id="note">NOTE: Click On Submit Before You Calculate.</p>
+    </div>
+    <div class="calculators">
+        <div class="analysis_container grid_child">
+            <p id="heading">Statistical Analysis</p>
+            <p id="com_stat_value"></p>
+            <div id="pseudo_about" style="margin: auto;">
+                <button id="com_stat">Calculate</button>
+                <button id="reload1">Reset Table</button>
+            </div>
+            <p id="sug"></p>
+        </div>
+        <div class="mean_container grid_child" style="display: none;">
+            <p>Mean</p>
+            <p id="mean_value"></p>
+            <button id="mean" onclick="calculateMean()">Calculate</button>
+        </div>
+        <div class="median_container grid_child" style="display: none;">
+            <p>Median</p>
+            <p id="median_value"></p>
+            <button id="median" onclick="calculateMedian()" >Calculate</button>
+        </div>
+        <div class="mode_container grid_child"style="display: none;" >
+            <p>Mode</p>
+            <p id="mode_value"></p>
+            <button id="mode" onclick="calculateMode()">Calculate</button>
+        </div>
+    </div>
+    <div id="about">
+        <p class="que">About Page</p>
+        <ul>
+            <li>This page is still in beta stage.</li>
+            <li>Now, we can only calculate for Exclusive Grouped Frequency Distribution.</li>
+            <li>NOTE:<strong>You might see unexpected data if donot follow the steps as mentioned.</strong> </li>
+            <li>In future, Calculation for Inclusive Classes and Calculation for discrete data will introduced.</li>
+        </ul>
+    </div>
+    <div id="contact">
+        <span id="ctme" class="que">Contact Me</span>
+        <span id="mail"><a href="mailto:harikiran.kante@gmail.com" target="_blank">Mail Me</a></span>
+        <span id="wa"><a href="https://wa.me/917981754157?text=I%20like%20your%20Website.%20Good One =)!" target="_blank" >Whats App Me</a></span>
+        <span id="github"><a href="https://github.com/hari4742" target="_blank">My GitHub</a></span>
+    </div>
+    <!-- Loading Page -->
+    <div id="loader">
+        <p>Loading <span class="dot1">.</span> <span class="dot2">.</span> <span class="dot3">.</span></p>
+    </div>
+    <img src="xps-8pb7Hq539Zw-unsplash.jpg" alt="">
+    <script>
+        // Window Loader
+        let load = document.querySelector("#loader");
+        window.addEventListener("load",function(){
+           load.style.display = "none";
+        })
+    </script>
+</body>
+</html>
