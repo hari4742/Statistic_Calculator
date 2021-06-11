@@ -32,6 +32,8 @@ sample.onclick=function(){
     lower_bound.value = 5;
     upper_bound.value = 10;
     num_rows.value = 7;
+let sample2 = document.getElementById("fill_sample2");
+sample2.classList.remove("fill_cls");
 }
 var sample2 = document.getElementById("fill_sample2");
 sample2.onclick=function(){
