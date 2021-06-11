@@ -183,7 +183,9 @@ button{
     font-size: 0.25rem;
     box-shadow: 2px 2px 15px 1px rgba(0,0,0,0.09);
 }
-
+.fill_cls{
+    display:none;
+}
 /*     About     */
 #about{
     font-size: 0.25rem;
