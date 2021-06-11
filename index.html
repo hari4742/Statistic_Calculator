@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="wait" class="ld">
     <div class="container">
         <nav>
             <div class="logo"><p id="logo_word1">Statistic</p> <p id="logo_word2">Calculator</p></div>
@@ -99,6 +100,8 @@
         <span id="wa"><a href="https://wa.me/917981754157?text=I%20like%20your%20Website.%20Good One =)!" target="_blank" >Whats App Me</a></span>
         <span id="github"><a href="https://github.com/hari4742" target="_blank">My GitHub</a></span>
     </div>
+    </div>
+
     <!-- Loading Page -->
     <div id="loader">
         <p>Loading <span class="dot1">.</span> <span class="dot2">.</span> <span class="dot3">.</span></p>
@@ -107,9 +110,11 @@
     <script>
         // Window Loader
         let load = document.querySelector("#loader");
+        let wait = document.querySelector("#wait");
         window.addEventListener("load",function(){
            load.style.display = "none";
-        })
+           wait.classList.remove("ld");
+        });
     </script>
 </body>
 </html>
